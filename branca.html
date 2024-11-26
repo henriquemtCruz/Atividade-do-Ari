@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        background-image: linear-gradient(to right bottom, rgb(214, 254, 255), rgb(182, 182, 182));
+    }
+    .conteudo{
+        background-image: linear-gradient(to right bottom, rgb(255, 252, 247), rgb(211, 211, 211));
+        padding: 100px;
+        border-radius: 20px;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        text-shadow: 5px 5px 10px rgb(32, 32, 32);
+    }
+    img{
+        width: 500px;
+        border-radius: 20px;
+        box-shadow: 20px 20px 45px rgb(133, 133, 133);
+    }
+</style>
+</head>
+<body>
+    <div class="conteudo">
+    <h1>O seu resultado é Branca de neve</h1>
+    <h1 id="porcentagem"> </h1>
+    <img src="https://i.pinimg.com/originals/cc/6c/54/cc6c5420df5a8ae91e76f016cdaa489d.png" alt="">
+</div>
+    <script>
+
+        let bela = Number(localStorage.getItem('contBela'))
+        let branca = Number(localStorage.getItem('ContBranca'))
+        let frozen = Number(localStorage.getItem('ContFrozen'))
+        let vanellope= Number(localStorage.getItem('ContVanellope'))
+       
+        let total = bela+branca+vanellope+frozen
+        let porc = (branca/total)*100
+ 
+        console.log(total)
+        console.log(bela)
+        console.log(branca)
+        console.log(frozen)
+        console.log(vanellope)
+        document.getElementById('porcentagem').innerHTML = porc + '%'
+
+    </script>
+</body>
+</html>
